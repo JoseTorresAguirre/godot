@@ -1,0 +1,243 @@
+[gd_scene load_steps=24 format=3 uid="uid://bjc4v1a2ee2r6"]
+
+[ext_resource type="Script" path="res://script/seleccionar_ficha.gd" id="1_aquim"]
+[ext_resource type="Script" path="res://script/ficha_1.gd" id="1_epmr2"]
+[ext_resource type="Script" path="res://script/ficha_2.gd" id="2_p412d"]
+[ext_resource type="Script" path="res://script/panel_1_seleccionar_ficha.gd" id="2_vvqbw"]
+[ext_resource type="Script" path="res://script/ficha_3.gd" id="3_uuocx"]
+[ext_resource type="Script" path="res://script/panel_2_seleccionar_ficha.gd" id="4_nbf37"]
+[ext_resource type="Script" path="res://script/ficha_4.gd" id="4_vo7sn"]
+[ext_resource type="Script" path="res://script/panel_3_seleccionar_ficha.gd" id="6_mod0g"]
+[ext_resource type="AudioStream" uid="uid://dohndg5pd0r1s" path="res://assets/sonidos/boton.mp3" id="6_vqi20"]
+[ext_resource type="Script" path="res://script/panel_4_seleccionar_ficha.gd" id="8_k1kki"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xcrs6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8g88"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wij4k"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_815t6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_75rvk"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a04wl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1l4m"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xakbf"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d7qa"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udqt4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00y0l"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0t0yh"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iujdl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Seleccionar ficha" type="Node2D"]
+script = ExtResource("1_aquim")
+
+[node name="titulo" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar Ficha"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="panel1" type="Panel" parent="."]
+offset_left = 153.0
+offset_top = 192.0
+offset_right = 333.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xcrs6")
+script = ExtResource("2_vvqbw")
+metadata/_edit_use_anchors_ = true
+
+[node name="ficha1" type="Sprite2D" parent="panel1"]
+position = Vector2(90, 85)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_epmr2")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel1/ficha1"]
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 368.0
+offset_right = 332.0
+offset_bottom = 416.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_t8g88")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wij4k")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel2" type="Panel" parent="."]
+offset_left = 375.0
+offset_top = 192.0
+offset_right = 555.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_815t6")
+script = ExtResource("4_nbf37")
+metadata/_edit_use_anchors_ = true
+
+[node name="ficha2" type="Sprite2D" parent="panel2"]
+position = Vector2(90, 85)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_p412d")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel2/ficha2"]
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 368.0
+offset_right = 556.0
+offset_bottom = 416.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_75rvk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a04wl")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel3" type="Panel" parent="."]
+offset_left = 598.0
+offset_top = 192.0
+offset_right = 778.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i1l4m")
+script = ExtResource("6_mod0g")
+metadata/_edit_use_anchors_ = true
+
+[node name="ficha3" type="Sprite2D" parent="panel3"]
+position = Vector2(90, 85)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_uuocx")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel3/ficha3"]
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 599.0
+offset_top = 368.0
+offset_right = 779.0
+offset_bottom = 416.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_xakbf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2d7qa")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel4" type="Panel" parent="."]
+offset_left = 817.0
+offset_top = 192.0
+offset_right = 997.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_udqt4")
+script = ExtResource("8_k1kki")
+metadata/_edit_use_anchors_ = true
+
+[node name="ficha4" type="Sprite2D" parent="panel4"]
+position = Vector2(90, 85)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_vo7sn")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel4/ficha4"]
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 818.0
+offset_top = 368.0
+offset_right = 998.0
+offset_bottom = 416.0
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_00y0l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0t0yh")
+theme_override_styles/normal = SubResource("StyleBoxFlat_iujdl")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_vqi20")
+
+[connection signal="request_completed" from="panel1/ficha1/HTTPRequest" to="panel1/ficha1" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button1" to="panel1" method="_on_button_1_mouse_entered"]
+[connection signal="mouse_exited" from="Button1" to="panel1" method="_on_button_1_mouse_exited"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="request_completed" from="panel2/ficha2/HTTPRequest" to="panel2/ficha2" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button2" to="panel2" method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="panel2" method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="request_completed" from="panel3/ficha3/HTTPRequest" to="panel3/ficha3" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button3" to="panel3" method="_on_button_3_mouse_entered"]
+[connection signal="mouse_exited" from="Button3" to="panel3" method="_on_button_3_mouse_exited"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="request_completed" from="panel4/ficha4/HTTPRequest" to="panel4/ficha4" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button4" to="panel4" method="_on_button_4_mouse_entered"]
+[connection signal="mouse_exited" from="Button4" to="panel4" method="_on_button_4_mouse_exited"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

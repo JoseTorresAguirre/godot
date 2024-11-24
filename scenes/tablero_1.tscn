@@ -1,0 +1,1952 @@
+[gd_scene load_steps=23 format=3 uid="uid://b3d68nk1vfn7n"]
+
+[ext_resource type="Script" path="res://scenes/personaje_1_conejo.gd" id="2_rt77g"]
+[ext_resource type="Script" path="res://script/pj_1_tablero_1.gd" id="2_sy1r2"]
+[ext_resource type="Script" path="res://script/personaje1_ficha_tablero.gd" id="3_hlxff"]
+
+[sub_resource type="Theme" id="Theme_hbyjw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8u2i"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 250
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_254of"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ll47g"]
+bg_color = Color(0.94902, 0.521569, 0.835294, 1)
+corner_radius_top_left = 55
+corner_radius_top_right = 55
+corner_radius_bottom_right = 55
+corner_radius_bottom_left = 55
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwcx3"]
+bg_color = Color(0.898039, 0.121569, 0.0666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fx236"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+corner_radius_top_left = 300
+corner_radius_top_right = 300
+corner_radius_bottom_right = 300
+corner_radius_bottom_left = 300
+corner_detail = 14
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5khl6"]
+bg_color = Color(0.898039, 0.121569, 0.0666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6vxe"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2i8t7"]
+bg_color = Color(0.94902, 0.521569, 0.835294, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+corner_detail = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7iy6e"]
+bg_color = Color(0, 0.909804, 0.117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsms3"]
+bg_color = Color(0, 0.909804, 0.117647, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6wo4k"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_88c0v"]
+bg_color = Color(0.814181, 0.0330379, 0.64696, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y2p7k"]
+bg_color = Color(0.968627, 0.866667, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnsyi"]
+bg_color = Color(0.968627, 0.866667, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_10d7b"]
+bg_color = Color(0.815686, 0.0313726, 0.647059, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.815686, 0.0313726, 0.647059, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mt1qm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.815686, 0.0313726, 0.647059, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iojt5"]
+bg_color = Color(0.85098, 0.0431373, 0.678431, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.815686, 0.0313726, 0.647059, 1)
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3p51s"]
+bg_color = Color(0.818312, 0.508503, 0.412271, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="tablero_1" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(200, 200)
+offset_left = -272.0
+offset_top = -256.0
+offset_right = 264.0
+offset_bottom = 256.0
+theme = SubResource("Theme_hbyjw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_d8u2i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel1" type="Panel" parent="Panel"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 0
+offset_left = 304.0
+offset_top = 272.0
+offset_right = 434.0
+offset_bottom = 402.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_254of")
+metadata/_edit_use_anchors_ = true
+
+[node name="circu" type="Panel" parent="Panel/Panel1"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ll47g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pj1" type="Sprite2D" parent="Panel/Panel1"]
+position = Vector2(64, 64)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("2_sy1r2")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel/Panel1/Pj1"]
+
+[node name="puntos1" type="Panel" parent="Panel/Panel1"]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 116.0
+offset_bottom = 224.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fwcx3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel/Panel1/puntos1"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 75.0
+offset_bottom = 31.0
+text = "Arturo
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel/Panel1/puntos1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 101.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 12
+text = "Presupuesto:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel/Panel1/puntos1"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 90.0
+offset_bottom = 71.0
+text = "1000 $"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Panel/Panel1/puntos1"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 65.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 12
+text = "Puntos:"
+metadata/_edit_use_anchors_ = true
+
+[node name="puntos1" type="Label" parent="Panel/Panel1/puntos1"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 111.0
+text = "0"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Personaje1Conejo" type="Sprite2D" parent="Panel/Panel1"]
+position = Vector2(128, 48)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("2_rt77g")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel/Panel1/Personaje1Conejo"]
+
+[node name="Panel" type="Panel" parent="Panel"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_top = 648.0
+offset_right = 536.0
+offset_bottom = 1160.0
+theme = SubResource("Theme_hbyjw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fx236")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Panel/Panel"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_left = 1160.0
+offset_right = 1696.0
+offset_bottom = 512.0
+theme = SubResource("Theme_hbyjw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fx236")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Panel/Panel/Panel"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 0
+offset_top = -648.0
+offset_right = 536.0
+offset_bottom = -136.0
+theme = SubResource("Theme_hbyjw")
+theme_override_styles/panel = SubResource("StyleBoxFlat_fx236")
+metadata/_edit_use_anchors_ = true
+
+[node name="puntaje1" type="Panel" parent="Panel"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = 460.0
+offset_top = 270.0
+offset_right = 760.0
+offset_bottom = 370.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5khl6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel/puntaje1"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 138.0
+offset_bottom = 34.0
+pivot_offset = Vector2(50, 0)
+theme_override_font_sizes/font_size = 12
+text = "Productos(0/5):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel/puntaje1"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 40.0
+offset_right = 138.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 12
+text = "Proyectos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel/puntaje1"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 70.0
+offset_right = 138.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 12
+text = "Recursos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 40.0
+offset_top = 504.0
+offset_right = 170.0
+offset_bottom = 634.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6vxe")
+metadata/_edit_use_anchors_ = true
+
+[node name="circu" type="Panel" parent="Panel2"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 120.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2i8t7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pj2" type="Sprite2D" parent="Panel2"]
+position = Vector2(66, 64)
+scale = Vector2(0.75, 0.683333)
+
+[node name="puntos2" type="Panel" parent="Panel2"]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 0
+offset_left = 8.0
+offset_top = -96.0
+offset_right = 108.0
+offset_bottom = 24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7iy6e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel2/puntos2"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 75.0
+offset_bottom = 31.0
+text = "Oscar"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel2/puntos2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 101.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 12
+text = "Presupuesto:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel2/puntos2"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 90.0
+offset_bottom = 71.0
+text = "1000 $"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Panel2/puntos2"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 65.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 12
+text = "Puntos:"
+metadata/_edit_use_anchors_ = true
+
+[node name="puntos1" type="Label" parent="Panel2/puntos2"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 111.0
+text = "0"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="puntaje2" type="Panel" parent="Panel2"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = 149.0
+offset_top = 20.0
+offset_right = 449.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hsms3")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel2/puntaje2"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 10.0
+offset_right = 137.0
+offset_bottom = 34.0
+pivot_offset = Vector2(50, 0)
+theme_override_font_sizes/font_size = 12
+text = "Productos(0/5):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel2/puntaje2"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 40.0
+offset_right = 137.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 12
+text = "Proyectos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel2/puntaje2"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 70.0
+offset_right = 137.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 12
+text = "Recursos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Personaje2Zorro" type="Sprite2D" parent="Panel2"]
+position = Vector2(136, 72)
+scale = Vector2(0.2, 0.2)
+
+[node name="Panel3" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 1008.0
+offset_top = 504.0
+offset_right = 1138.0
+offset_bottom = 634.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6vxe")
+metadata/_edit_use_anchors_ = true
+
+[node name="circu" type="Panel" parent="Panel3"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 10.0
+offset_right = 121.0
+offset_bottom = 120.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2i8t7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pj3" type="Sprite2D" parent="Panel3"]
+position = Vector2(66, 64)
+scale = Vector2(0.766667, 0.7)
+
+[node name="puntos3" type="Panel" parent="Panel3"]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 0
+offset_left = 16.0
+offset_top = -104.0
+offset_right = 116.0
+offset_bottom = 16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6wo4k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel3/puntos3"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 75.0
+offset_bottom = 31.0
+text = "Melisa"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel3/puntos3"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 101.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 12
+text = "Presupuesto:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel3/puntos3"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 90.0
+offset_bottom = 71.0
+text = "1000 $"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Panel3/puntos3"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 65.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 12
+text = "Puntos:"
+metadata/_edit_use_anchors_ = true
+
+[node name="puntos1" type="Label" parent="Panel3/puntos3"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 111.0
+text = "0"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="puntaje3" type="Panel" parent="Panel3"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = -320.0
+offset_top = 19.0
+offset_right = -20.0
+offset_bottom = 119.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_88c0v")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel3/puntaje3"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 13.0
+offset_right = 142.0
+offset_bottom = 37.0
+pivot_offset = Vector2(50, 0)
+theme_override_font_sizes/font_size = 12
+text = "Productos(0/5):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel3/puntaje3"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 43.0
+offset_right = 142.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 12
+text = "Proyectos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel3/puntaje3"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 73.0
+offset_right = 142.0
+offset_bottom = 96.0
+theme_override_font_sizes/font_size = 12
+text = "Recursos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Personaje3León" type="Sprite2D" parent="Panel3"]
+position = Vector2(-8.00006, 80)
+scale = Vector2(0.2, 0.2)
+
+[node name="Panel4" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 1000.0
+offset_top = 16.0
+offset_right = 1130.0
+offset_bottom = 146.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6vxe")
+metadata/_edit_use_anchors_ = true
+
+[node name="circu" type="Panel" parent="Panel4"]
+custom_minimum_size = Vector2(110, 110)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 121.0
+offset_bottom = 119.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2i8t7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pj4" type="Sprite2D" parent="Panel4"]
+position = Vector2(64.0001, 64)
+scale = Vector2(0.75, 0.716667)
+
+[node name="puntos4" type="Panel" parent="Panel4"]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 0
+offset_left = 24.0
+offset_top = 104.0
+offset_right = 124.0
+offset_bottom = 224.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y2p7k")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel4/puntos4"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 8.0
+offset_right = 75.0
+offset_bottom = 31.0
+text = "Nicole"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel4/puntos4"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 33.0
+offset_right = 101.0
+offset_bottom = 56.0
+theme_override_font_sizes/font_size = 12
+text = "Presupuesto:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel4/puntos4"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 90.0
+offset_bottom = 71.0
+text = "1000 $"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="Panel4/puntos4"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 72.0
+offset_right = 65.0
+offset_bottom = 95.0
+theme_override_font_sizes/font_size = 12
+text = "Puntos:"
+metadata/_edit_use_anchors_ = true
+
+[node name="puntos1" type="Label" parent="Panel4/puntos4"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 88.0
+offset_right = 80.0
+offset_bottom = 111.0
+text = "0"
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="puntaje4" type="Panel" parent="Panel4"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 0
+offset_left = -326.0
+offset_top = -2.0
+offset_right = -26.0
+offset_bottom = 98.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xnsyi")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel4/puntaje4"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 136.0
+offset_bottom = 34.0
+pivot_offset = Vector2(50, 0)
+theme_override_font_sizes/font_size = 12
+text = "Productos(0/5):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Panel4/puntaje4"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 40.0
+offset_right = 136.0
+offset_bottom = 63.0
+theme_override_font_sizes/font_size = 12
+text = "Proyectos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="Panel4/puntaje4"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 0
+offset_left = 18.0
+offset_top = 70.0
+offset_right = 136.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 12
+text = "Recursos(0/1):"
+metadata/_edit_use_anchors_ = true
+
+[node name="Personaje4Gato" type="Sprite2D" parent="Panel4"]
+position = Vector2(0, 56)
+scale = Vector2(0.2, 0.2)
+
+[node name="Enero" type="Panel" parent="."]
+custom_minimum_size = Vector2(820, 380)
+offset_left = 180.0
+offset_top = 121.0
+offset_right = 1000.0
+offset_bottom = 513.0
+metadata/_edit_use_anchors_ = true
+
+[node name="mes" type="Label" parent="Enero"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 9.0
+offset_right = 143.0
+offset_bottom = 51.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "Enero"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel-inicio" type="Panel" parent="Enero"]
+custom_minimum_size = Vector2(100, 80)
+layout_mode = 0
+offset_left = 59.0
+offset_top = 69.0
+offset_right = 159.0
+offset_bottom = 149.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_10d7b")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 50.0
+offset_right = 79.0
+offset_bottom = 85.0
+rotation = -0.785398
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 25
+text = "Inicio"
+metadata/_edit_use_anchors_ = true
+
+[node name="Personaje1Conejo" type="Sprite2D" parent="Enero/panel-inicio"]
+position = Vector2(72, 61)
+scale = Vector2(0.15, 0.15)
+script = ExtResource("3_hlxff")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Enero/panel-inicio/Personaje1Conejo"]
+
+[node name="Personaje2Zorro" type="Sprite2D" parent="Enero/panel-inicio"]
+position = Vector2(32, 61)
+scale = Vector2(0.15, 0.15)
+
+[node name="Personaje3León" type="Sprite2D" parent="Enero/panel-inicio"]
+position = Vector2(64, 21)
+scale = Vector2(0.15, 0.15)
+
+[node name="Personaje4Gato" type="Sprite2D" parent="Enero/panel-inicio"]
+position = Vector2(24, 29)
+scale = Vector2(0.15, 0.15)
+
+[node name="dia1" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 121.0
+offset_top = -54.0
+offset_right = 171.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia1"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia1/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "1
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia1"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 45.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia2" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 178.0
+offset_top = -54.0
+offset_right = 228.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia2"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia2/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "2
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia2"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia3" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 234.0
+offset_top = -54.0
+offset_right = 284.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia3"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia3/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "3
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia3"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia4" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 291.0
+offset_top = -54.0
+offset_right = 341.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia4"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia4/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "4
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia4"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia5" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 348.0
+offset_top = -54.0
+offset_right = 398.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia5"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia5/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "5
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia5"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia6" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 405.0
+offset_top = -54.0
+offset_right = 455.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia6"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia6/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 49.0
+offset_bottom = 13.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "6
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia7" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 461.0
+offset_top = -54.0
+offset_right = 511.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia7"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia7"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "7
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia8" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 518.0
+offset_top = -54.0
+offset_right = 568.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia8"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia8/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "8
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia8"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 45.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia9" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 577.0
+offset_top = -54.0
+offset_right = 627.0
+offset_bottom = -4.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia9"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia9/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "9
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia9"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 45.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "2
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia10" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 577.0
+offset_top = 18.0
+offset_right = 627.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia10"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia10/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "10
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia10"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "2
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia11" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 578.0
+offset_top = 89.0
+offset_right = 628.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia11"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia11/numero"]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 47.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "11
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia11"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "2
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia12" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 519.0
+offset_top = 89.0
+offset_right = 569.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia12"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia12/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "12
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia12"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia13" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 462.0
+offset_top = 89.0
+offset_right = 512.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia13"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia13/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "13
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia14" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 406.0
+offset_top = 89.0
+offset_right = 456.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia14"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia14/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "14
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia15" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 349.0
+offset_top = 89.0
+offset_right = 399.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia15"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia15/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "15
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia15"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "2"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia16" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 292.0
+offset_top = 89.0
+offset_right = 342.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia16"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia16/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "16
+
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia16/numero/Label2"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "16"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia16"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 44.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "2"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia17" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 235.0
+offset_top = 89.0
+offset_right = 285.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia17"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia17/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "17"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia17"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 45.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia18" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 179.0
+offset_top = 89.0
+offset_right = 229.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia18"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia18/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "18"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia18"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 45.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia19" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 122.0
+offset_top = 89.0
+offset_right = 172.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia19"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia19/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "19"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia20" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 122.0
+offset_top = 162.0
+offset_right = 172.0
+offset_bottom = 212.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia20"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia20/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "20"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia21" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 178.0
+offset_top = 234.0
+offset_right = 228.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia21"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia21/numero"]
+layout_mode = 0
+offset_left = -55.0
+offset_right = -7.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "21"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia21"]
+layout_mode = 0
+offset_left = -52.0
+offset_top = 5.0
+offset_right = -12.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia22" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 121.0
+offset_top = 234.0
+offset_right = 171.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia22"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia22/numero"]
+layout_mode = 0
+offset_left = 58.0
+offset_right = 106.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "22"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia23" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 234.0
+offset_top = 234.0
+offset_right = 284.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia23"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia23/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "23"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia23"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 45.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "2"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia24" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 291.0
+offset_top = 234.0
+offset_right = 341.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia24"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia24/numero"]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "24"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia24"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 45.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "1"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia25" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 348.0
+offset_top = 234.0
+offset_right = 398.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia25"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia25/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "25"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia26" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 405.0
+offset_top = 234.0
+offset_right = 455.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia26"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia26/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "26"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia27" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 461.0
+offset_top = 234.0
+offset_right = 511.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia27"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia27/numero"]
+layout_mode = 0
+offset_left = 1.0
+offset_right = 49.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "27"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia28" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 577.0
+offset_top = 234.0
+offset_right = 627.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia28"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia28/numero"]
+layout_mode = 0
+offset_left = -59.0
+offset_right = -11.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "28"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="dia29" type="Panel" parent="Enero/panel-inicio"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 518.0
+offset_top = 234.0
+offset_right = 568.0
+offset_bottom = 284.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mt1qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="numero" type="Panel" parent="Enero/panel-inicio/dia29"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_top = 50.0
+offset_right = 50.0
+offset_bottom = 66.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iojt5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Enero/panel-inicio/dia29/numero"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 107.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 10
+text = "29"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Enero/panel-inicio/dia29"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 6.0
+offset_right = 104.0
+offset_bottom = 48.0
+theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
+theme_override_font_sizes/font_size = 30
+text = "3"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel5" type="Panel" parent="."]
+custom_minimum_size = Vector2(100, 50)
+offset_left = 527.0
+offset_top = 44.0
+offset_right = 627.0
+offset_bottom = 84.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3p51s")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel5"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 12.0
+offset_right = 78.0
+offset_bottom = 35.0
+text = "Pausar"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="request_completed" from="Panel/Panel1/Pj1/HTTPRequest" to="Panel/Panel1/Pj1" method="_on_http_request_request_completed"]
+[connection signal="request_completed" from="Panel/Panel1/Personaje1Conejo/HTTPRequest" to="Panel/Panel1/Personaje1Conejo" method="_on_http_request_request_completed"]
+[connection signal="request_completed" from="Enero/panel-inicio/Personaje1Conejo/HTTPRequest" to="Enero/panel-inicio/Personaje1Conejo" method="_on_http_request_request_completed"]

@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=3 uid="uid://buat0vwwgr6sj"]
+
+[ext_resource type="Script" path="res://script/vista_1_1.gd" id="1_chxrf"]
+[ext_resource type="Script" path="res://script/pj_1_vista_1_1.gd" id="2_b4ryp"]
+[ext_resource type="AudioStream" uid="uid://dohndg5pd0r1s" path="res://assets/sonidos/boton.mp3" id="3_rwim6"]
+
+[sub_resource type="Theme" id="Theme_1mcd7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w8c8"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsamq"]
+bg_color = Color(0.411765, 0.796078, 0.482353, 1)
+
+[node name="vista_1_1" type="Node2D"]
+script = ExtResource("1_chxrf")
+
+[node name="titulo" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 15.0
+offset_right = 1152.0
+offset_bottom = 79.0
+theme = SubResource("Theme_1mcd7")
+theme_override_font_sizes/font_size = 30
+text = "Sala 001253"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="pass" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 55.0
+offset_right = 1160.0
+offset_bottom = 119.0
+theme = SubResource("Theme_1mcd7")
+theme_override_colors/font_color = Color(0.678431, 0.654902, 0.654902, 1)
+theme_override_font_sizes/font_size = 18
+text = "Contraseña: 123456"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="usuario" type="Panel" parent="."]
+offset_left = 496.0
+offset_top = 157.0
+offset_right = 680.0
+offset_bottom = 293.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0w8c8")
+
+[node name="Pj1" type="Sprite2D" parent="usuario"]
+position = Vector2(96, 64)
+script = ExtResource("2_b4ryp")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="usuario/Pj1"]
+
+[node name="usuario1_nick1" type="ColorRect" parent="."]
+offset_left = 160.0
+offset_top = 358.0
+offset_right = 456.0
+offset_bottom = 406.0
+
+[node name="usuario1_nick2" type="ColorRect" parent="."]
+offset_left = 160.0
+offset_top = 422.0
+offset_right = 456.0
+offset_bottom = 470.0
+
+[node name="usuario1_nick3" type="ColorRect" parent="."]
+offset_left = 160.0
+offset_top = 486.0
+offset_right = 456.0
+offset_bottom = 534.0
+
+[node name="usuario1_nick4" type="ColorRect" parent="."]
+offset_left = 160.0
+offset_top = 550.0
+offset_right = 456.0
+offset_bottom = 598.0
+
+[node name="presupuesto" type="ColorRect" parent="."]
+offset_left = 736.0
+offset_top = 160.0
+offset_right = 1032.0
+offset_bottom = 240.0
+
+[node name="name" type="Label" parent="presupuesto"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 152.0
+offset_bottom = 40.0
+theme_override_colors/font_color = Color(0.556863, 0.556863, 0.576471, 1)
+text = "Presupuesto:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cantidad" type="Label" parent="presupuesto"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 40.0
+offset_right = 264.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0.0141337, 0.0141312, 0.0156641, 1)
+theme_override_font_sizes/font_size = 20
+text = "1000 $"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 744.0
+offset_top = 472.0
+offset_right = 1024.0
+offset_bottom = 592.0
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_rsamq")
+text = "Siguiente"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_rwim6")
+
+[connection signal="request_completed" from="usuario/Pj1/HTTPRequest" to="usuario/Pj1" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

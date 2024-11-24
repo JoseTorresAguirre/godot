@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3vx168lj4ktl"]
+
+[ext_resource type="PackedScene" uid="uid://b3d68nk1vfn7n" path="res://scenes/tablero_1.tscn" id="1_gbkpf"]
+[ext_resource type="Script" path="res://script/lanzar_5.gd" id="1_hr3qu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r70oe"]
+bg_color = Color(0.72549, 0, 0.0901961, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="lanzar_5" type="Node2D"]
+script = ExtResource("1_hr3qu")
+
+[node name="tablero_1" parent="." instance=ExtResource("1_gbkpf")]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(850, 450)
+offset_left = 168.0
+offset_top = 104.0
+offset_right = 568.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_r70oe")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 104.0
+offset_right = 680.0
+offset_bottom = 264.0
+theme_override_font_sizes/font_size = 20
+text = "Felicidades  Arturo, obtuvistes la puntación mas alta y tienes el 1° turno"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

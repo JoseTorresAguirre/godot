@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxqrk4de6oat6"]
+
+[ext_resource type="PackedScene" uid="uid://b3d68nk1vfn7n" path="res://scenes/tablero_1.tscn" id="1_kdnc1"]
+[ext_resource type="Script" path="res://script/lanzar_2.gd" id="1_moenr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrvje"]
+bg_color = Color(0.72549, 0, 0.0901961, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[node name="lanzar2" type="Node2D"]
+script = ExtResource("1_moenr")
+
+[node name="tablero_1" parent="." instance=ExtResource("1_kdnc1")]
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(850, 450)
+offset_left = 168.0
+offset_top = 104.0
+offset_right = 568.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qrvje")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 32.0
+offset_right = 297.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 20
+text = "Arturo, estas listo?:"

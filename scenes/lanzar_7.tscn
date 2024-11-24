@@ -1,0 +1,113 @@
+[gd_scene load_steps=13 format=3 uid="uid://dfp8otjf153ur"]
+
+[ext_resource type="Script" path="res://script/lanzar_7.gd" id="1_i1qvf"]
+[ext_resource type="Texture2D" uid="uid://dwq4iu6ud35no" path="res://assets/images/dados/dados-crop1.png" id="2_3hgl1"]
+[ext_resource type="Texture2D" uid="uid://d0e7b85rkaqvg" path="res://assets/images/dados/dados-crop2.png" id="3_ert1q"]
+[ext_resource type="Texture2D" uid="uid://d2rgfbtcxld14" path="res://assets/images/dados/dados-crop3.png" id="4_qn7h7"]
+[ext_resource type="Texture2D" uid="uid://g17imdu6ff5k" path="res://assets/images/dados/dados-crop4.png" id="5_cbpfq"]
+[ext_resource type="Texture2D" uid="uid://d2i7qffar1low" path="res://assets/images/dados/dados-crop5.png" id="6_je7qs"]
+[ext_resource type="Texture2D" uid="uid://i8k0gg7u0xhf" path="res://assets/images/dados/dados-crop6.png" id="7_81kfo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87qq2"]
+bg_color = Color(0.72549, 0, 0.0901961, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="Theme" id="Theme_c3bm1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0jtfi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yljpn"]
+bg_color = Color(0.00853637, 0.200987, 0.488966, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vstmm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3hgl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ert1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qn7h7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cbpfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_je7qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_81kfo")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}]
+
+[node name="lanzar_7" type="Node2D"]
+script = ExtResource("1_i1qvf")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(850, 450)
+offset_left = 168.0
+offset_top = 104.0
+offset_right = 568.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_87qq2")
+
+[node name="Label" type="Label" parent="Panel"]
+offset_left = 160.0
+offset_top = 64.0
+offset_right = 345.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 20
+text = "Arturo, estas listo?:"
+
+[node name="start" type="Button" parent="Panel"]
+custom_minimum_size = Vector2(200, 45)
+offset_left = 320.0
+offset_top = 136.0
+offset_right = 520.0
+offset_bottom = 181.0
+theme = SubResource("Theme_c3bm1")
+theme_override_colors/font_hover_color = Color(0.739789, 1.93726e-06, 9.62615e-07, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_0jtfi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_yljpn")
+text = "Lanzar dados"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(584, 368)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_vstmm")
+animation = &"1"
+frame = 3
+frame_progress = 0.891554
+
+[node name="avanzar" type="Label" parent="."]
+offset_left = 416.0
+offset_top = 448.0
+offset_right = 768.0
+offset_bottom = 471.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/start" to="." method="_on_button_pressed"]

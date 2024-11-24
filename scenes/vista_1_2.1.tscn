@@ -1,0 +1,568 @@
+[gd_scene load_steps=28 format=3 uid="uid://b0skv2mwso535"]
+
+[ext_resource type="Script" path="res://script/vista_1_2.1.gd" id="1_4w42w"]
+[ext_resource type="Script" path="res://script/pj_1_vista_1_2.gd" id="2_fpuos"]
+[ext_resource type="Script" path="res://script/pj_1_ficha.gd" id="3_57w32"]
+[ext_resource type="Script" path="res://script/dado_seleccionar_dado.gd" id="4_qtp4a"]
+[ext_resource type="AudioStream" uid="uid://dohndg5pd0r1s" path="res://assets/sonidos/boton.mp3" id="6_15rb4"]
+
+[sub_resource type="Theme" id="Theme_w35lc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftkqm"]
+bg_color = Color(0.898039, 0.121569, 0.0666667, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjahb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+corner_detail = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stq57"]
+bg_color = Color(0.898039, 0.121569, 0.0666667, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x24sr"]
+bg_color = Color(0.968627, 0.866667, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbo8e"]
+bg_color = Color(0.968627, 0.87451, 0.054902, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjien"]
+bg_color = Color(0, 0.909804, 0.117647, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66eqb"]
+bg_color = Color(0.231373, 0.929412, 0.321569, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6xclv"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tq2b"]
+bg_color = Color(0.909804, 0, 0.615686, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmkx1"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r4ti"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_me430"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4dx0s"]
+bg_color = Color(0.933333, 0.6, 0.6, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1dboe"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_06hs2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cc52i"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.909804, 0.196078, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44ynq"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_453g2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qdbc3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.968627, 0.866667, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4yaj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.909804, 0.117647, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l1cpd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.909804, 0, 0.615686, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="vista_1_2" type="Node2D"]
+script = ExtResource("1_4w42w")
+
+[node name="titulo" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 15.0
+offset_right = 1152.0
+offset_bottom = 79.0
+theme = SubResource("Theme_w35lc")
+theme_override_font_sizes/font_size = 30
+text = "Sala 001253"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel1" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 368.0
+offset_top = 120.0
+offset_right = 498.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ftkqm")
+
+[node name="circu" type="Panel" parent="Panel1"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 114.0
+offset_bottom = 117.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjahb")
+
+[node name="nombre1" type="Panel" parent="Panel1"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 0
+offset_top = 104.0
+offset_right = 130.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_stq57")
+
+[node name="Label1" type="Label" parent="Panel1"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 112.0
+offset_right = 91.0
+offset_bottom = 135.0
+text = "Arturo"
+
+[node name="Pj1" type="Sprite2D" parent="Panel1"]
+position = Vector2(64, 64)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("2_fpuos")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel1/Pj1"]
+
+[node name="Panel2" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 542.0
+offset_top = 120.0
+offset_right = 672.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x24sr")
+
+[node name="circu" type="Panel" parent="Panel2"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 114.0
+offset_bottom = 117.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjahb")
+
+[node name="nombre2" type="Panel" parent="Panel2"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 0
+offset_left = -1.0
+offset_top = 104.0
+offset_right = 129.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cbo8e")
+
+[node name="Label2" type="Label" parent="Panel2/nombre2"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 31.0
+text = "Oscar
+"
+
+[node name="Pj2" type="Sprite2D" parent="Panel2"]
+position = Vector2(66, 64)
+scale = Vector2(0.75, 0.683333)
+
+[node name="Panel3" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 720.0
+offset_top = 120.0
+offset_right = 850.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yjien")
+
+[node name="circu" type="Panel" parent="Panel3"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 114.0
+offset_bottom = 117.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjahb")
+
+[node name="nombre3" type="Panel" parent="Panel3"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 0
+offset_top = 104.0
+offset_right = 130.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_66eqb")
+
+[node name="Label3" type="Label" parent="Panel3"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 112.0
+offset_right = 98.0
+offset_bottom = 135.0
+text = "Melissa"
+
+[node name="Pj3" type="Sprite2D" parent="Panel3"]
+position = Vector2(66, 64)
+scale = Vector2(0.766667, 0.7)
+
+[node name="Panel4" type="Panel" parent="."]
+custom_minimum_size = Vector2(130, 130)
+offset_left = 896.0
+offset_top = 120.0
+offset_right = 1026.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6xclv")
+
+[node name="circu" type="Panel" parent="Panel4"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 114.0
+offset_bottom = 117.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjahb")
+
+[node name="nombre4" type="Panel" parent="Panel4"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 0
+offset_top = 104.0
+offset_right = 130.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6tq2b")
+
+[node name="Label4" type="Label" parent="Panel4"]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 112.0
+offset_right = 91.0
+offset_bottom = 135.0
+text = "Nicole"
+
+[node name="Pj4" type="Sprite2D" parent="Panel4"]
+position = Vector2(66.0001, 64)
+scale = Vector2(0.75, 0.716667)
+
+[node name="iniciar" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 320.0
+offset_right = 320.0
+offset_bottom = 368.0
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_fmkx1")
+text = "Iniciar
+"
+
+[node name="sele_ficha" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 392.0
+offset_right = 320.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_1r4ti")
+text = "Seleccionar
+Ficha"
+
+[node name="sele_dado" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 472.0
+offset_right = 320.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_me430")
+text = "Seleccionar Dado"
+
+[node name="salir" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 552.0
+offset_right = 320.0
+offset_bottom = 600.0
+theme_override_colors/font_disabled_color = Color(0.181636, 0.411686, 0.995443, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4dx0s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1dboe")
+text = "Salir"
+
+[node name="panel-pj1" type="Panel" parent="."]
+offset_left = 352.0
+offset_top = 280.0
+offset_right = 512.0
+offset_bottom = 624.0
+theme = SubResource("Theme_06hs2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_cc52i")
+
+[node name="Label" type="Label" parent="panel-pj1"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 47.0
+text = "Maletin"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="panel-pj1/Label"]
+layout_mode = 0
+offset_top = 184.0
+offset_right = 160.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 14
+text = "Seleccion de dado"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="Panel" parent="panel-pj1"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 64.0
+offset_right = 125.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_44ynq")
+
+[node name="pj1_ficha" type="Sprite2D" parent="panel-pj1/ColorRect"]
+position = Vector2(44, 45)
+scale = Vector2(0.3, 0.3)
+script = ExtResource("3_57w32")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel-pj1/ColorRect/pj1_ficha"]
+
+[node name="ColorRect2" type="Panel" parent="panel-pj1"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 248.0
+offset_right = 125.0
+offset_bottom = 320.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_453g2")
+
+[node name="dado" type="Sprite2D" parent="panel-pj1/ColorRect2"]
+position = Vector2(44, 35)
+scale = Vector2(0.2, 0.2)
+script = ExtResource("4_qtp4a")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel-pj1/ColorRect2/dado"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_15rb4")
+
+[node name="panel-pj2" type="Panel" parent="."]
+offset_left = 528.0
+offset_top = 280.0
+offset_right = 688.0
+offset_bottom = 624.0
+theme = SubResource("Theme_06hs2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_qdbc3")
+
+[node name="ColorRect" type="ColorRect" parent="panel-pj2"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 120.0
+offset_bottom = 136.0
+
+[node name="ColorRect" type="ColorRect" parent="panel-pj2/ColorRect"]
+layout_mode = 0
+offset_top = 184.0
+offset_right = 88.0
+offset_bottom = 256.0
+
+[node name="Label" type="Label" parent="panel-pj2"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 47.0
+text = "Maletin"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="panel-pj2/Label"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 184.0
+offset_right = 123.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 14
+text = "Seleccion de dado"
+horizontal_alignment = 1
+
+[node name="panel-pj3" type="Panel" parent="."]
+offset_left = 704.0
+offset_top = 280.0
+offset_right = 864.0
+offset_bottom = 624.0
+theme = SubResource("Theme_06hs2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4yaj")
+
+[node name="ColorRect" type="ColorRect" parent="panel-pj3"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 120.0
+offset_bottom = 136.0
+
+[node name="ColorRect" type="ColorRect" parent="panel-pj3/ColorRect"]
+layout_mode = 0
+offset_top = 184.0
+offset_right = 88.0
+offset_bottom = 256.0
+
+[node name="Label" type="Label" parent="panel-pj3"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 47.0
+text = "Maletin"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="panel-pj3/Label"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 184.0
+offset_right = 123.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 14
+text = "Seleccion de dado"
+horizontal_alignment = 1
+
+[node name="panel-pj4" type="Panel" parent="."]
+offset_left = 880.0
+offset_top = 280.0
+offset_right = 1040.0
+offset_bottom = 624.0
+theme = SubResource("Theme_06hs2")
+theme_override_styles/panel = SubResource("StyleBoxFlat_l1cpd")
+
+[node name="ColorRect" type="ColorRect" parent="panel-pj4"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 64.0
+offset_right = 120.0
+offset_bottom = 136.0
+
+[node name="ColorRect" type="ColorRect" parent="panel-pj4/ColorRect"]
+layout_mode = 0
+offset_top = 184.0
+offset_right = 88.0
+offset_bottom = 256.0
+
+[node name="Label" type="Label" parent="panel-pj4"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 47.0
+text = "Maletin"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="panel-pj4/Label"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 184.0
+offset_right = 123.0
+offset_bottom = 207.0
+theme_override_font_sizes/font_size = 14
+text = "Seleccion de dado"
+horizontal_alignment = 1
+
+[connection signal="request_completed" from="Panel1/Pj1/HTTPRequest" to="Panel1/Pj1" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="sele_ficha" to="." method="_on_sele_ficha_pressed"]
+[connection signal="pressed" from="sele_dado" to="." method="_on_sele_dado_pressed"]
+[connection signal="request_completed" from="panel-pj1/ColorRect/pj1_ficha/HTTPRequest" to="panel-pj1/ColorRect/pj1_ficha" method="_on_http_request_request_completed"]
+[connection signal="request_completed" from="panel-pj1/ColorRect2/dado/HTTPRequest" to="panel-pj1/ColorRect2/dado" method="_on_http_request_request_completed"]

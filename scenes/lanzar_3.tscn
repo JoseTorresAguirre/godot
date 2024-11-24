@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpl6o1lie43eb"]
+
+[ext_resource type="Script" path="res://script/lanzar_3.gd" id="1_a3q1u"]
+[ext_resource type="PackedScene" uid="uid://dxqrk4de6oat6" path="res://scenes/lanzar_2.tscn" id="1_fpded"]
+
+[sub_resource type="Theme" id="Theme_qdmbp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxugm"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_klkjg"]
+bg_color = Color(0.00853637, 0.200987, 0.488966, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="lanzar_3" type="Node2D"]
+script = ExtResource("1_a3q1u")
+
+[node name="lanzar2" parent="." instance=ExtResource("1_fpded")]
+script = null
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(200, 45)
+offset_left = 440.0
+offset_top = 200.0
+offset_right = 551.0
+offset_bottom = 231.0
+theme = SubResource("Theme_qdmbp")
+theme_override_colors/font_hover_color = Color(0.739789, 1.93726e-06, 9.62615e-07, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxFlat_fxugm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_klkjg")
+text = "Lanzar dados"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

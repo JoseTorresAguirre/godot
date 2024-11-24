@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj3j58k4r5gw6"]
+
+[ext_resource type="PackedScene" uid="uid://b3d68nk1vfn7n" path="res://scenes/tablero_1.tscn" id="1_pa3iq"]
+[ext_resource type="Script" path="res://script/lanzar_6.gd" id="1_wfexw"]
+[ext_resource type="Script" path="res://script/lanzar_tablero_6.gd" id="2_pn0mq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7bjy"]
+bg_color = Color(0.921569, 0.411765, 0.411765, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u1c2"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.464314, 0.904271, 0.681681, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_behga"]
+bg_color = Color(0.615686, 0.615686, 0.615686, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="lanzar_6" type="Node2D"]
+script = ExtResource("1_wfexw")
+
+[node name="tablero_1" parent="." instance=ExtResource("1_pa3iq")]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 216.0
+offset_top = 48.0
+offset_right = 316.0
+offset_bottom = 148.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f7bjy")
+
+[node name="lanzar" type="Sprite2D" parent="Panel"]
+position = Vector2(50, 40)
+script = ExtResource("2_pn0mq")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel/lanzar"]
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 64.0
+offset_right = 90.0
+offset_bottom = 95.0
+theme_override_colors/font_hover_color = Color(0.870387, 2.88785e-07, 1.2514e-06, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_4u1c2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_behga")
+text = "Lanzar"
+
+[connection signal="request_completed" from="Panel/lanzar/HTTPRequest" to="Panel/lanzar" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

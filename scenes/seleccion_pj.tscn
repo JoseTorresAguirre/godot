@@ -1,0 +1,254 @@
+[gd_scene load_steps=22 format=3 uid="uid://btgqcv3ek2ifd"]
+
+[ext_resource type="Script" path="res://scenes/seleccion_pj.gd" id="1_7u2ak"]
+[ext_resource type="AudioStream" uid="uid://dohndg5pd0r1s" path="res://assets/sonidos/boton.mp3" id="3_4qj64"]
+[ext_resource type="Script" path="res://script/personaje_1.gd" id="3_k7v41"]
+[ext_resource type="Script" path="res://script/personaje_2.gd" id="5_g16o6"]
+[ext_resource type="Script" path="res://script/personaje_3.gd" id="7_k36iq"]
+[ext_resource type="Script" path="res://script/personaje_4.gd" id="9_7hpen"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82rl2"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6vfe"]
+bg_color = Color(0.290993, 0.819697, 0.512962, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tljjy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6o7er"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k8wkw"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4kowi"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snbhy"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cv31t"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8d41"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5ohk"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_70bi4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0etm"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0.768387, 0.829725, 0.654297, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qour"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p5o0i"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36j2q"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Seleccion de personaje" type="Node2D"]
+script = ExtResource("1_7u2ak")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 30
+text = "Selección de personaje"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Seleccion 1" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 384.0
+offset_right = 288.0
+offset_bottom = 432.0
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_82rl2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a6vfe")
+theme_override_styles/normal = SubResource("StyleBoxFlat_tljjy")
+text = "Seleccionar"
+clip_text = true
+
+[node name="Seleccion 2" type="Button" parent="."]
+offset_left = 408.0
+offset_top = 384.0
+offset_right = 544.0
+offset_bottom = 432.0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/focus = SubResource("StyleBoxFlat_6o7er")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_k8wkw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4kowi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_snbhy")
+text = "Seleccionar"
+
+[node name="Seleccion 3" type="Button" parent="."]
+offset_left = 664.0
+offset_top = 384.0
+offset_right = 800.0
+offset_bottom = 432.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_cv31t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_x8d41")
+text = "Seleccionar
+"
+
+[node name="Seleccion 4" type="Button" parent="."]
+offset_left = 920.0
+offset_top = 384.0
+offset_right = 1056.0
+offset_bottom = 432.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_o5ohk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_70bi4")
+text = "Seleccionar"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(152, 408)
+stream = ExtResource("3_4qj64")
+
+[node name="personaje1" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.126
+offset_left = 128.0
+offset_top = 192.0
+offset_right = 308.0
+offset_bottom = 342.0
+rotation = -0.00879363
+theme_override_styles/panel = SubResource("StyleBoxFlat_w0etm")
+script = ExtResource("3_k7v41")
+
+[node name="Pj1" type="Sprite2D" parent="personaje1"]
+position = Vector2(63.3644, 72.56)
+offset = Vector2(25, 0)
+
+[node name="personaje2" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.126
+offset_left = 384.0
+offset_top = 192.0
+offset_right = 564.0
+offset_bottom = 342.0
+rotation = -0.00879363
+theme_override_styles/panel = SubResource("StyleBoxFlat_7qour")
+script = ExtResource("5_g16o6")
+
+[node name="Pj2" type="Sprite2D" parent="personaje2"]
+position = Vector2(63.3644, 72.56)
+rotation = 0.00879363
+offset = Vector2(25, 0)
+
+[node name="personaje3" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.126
+offset_left = 640.0
+offset_top = 192.0
+offset_right = 820.0
+offset_bottom = 342.0
+rotation = -0.00879363
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_p5o0i")
+script = ExtResource("7_k36iq")
+
+[node name="Pj3" type="Sprite2D" parent="personaje3"]
+position = Vector2(71.3643, 72.6304)
+rotation = 0.00879363
+offset = Vector2(20, 0)
+
+[node name="personaje4" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.126
+offset_left = 896.0
+offset_top = 192.0
+offset_right = 1076.0
+offset_bottom = 342.0
+rotation = -0.00879363
+theme_override_styles/panel = SubResource("StyleBoxFlat_36j2q")
+script = ExtResource("9_7hpen")
+
+[node name="Pj4" type="Sprite2D" parent="personaje4"]
+position = Vector2(71.3641, 72.6304)
+rotation = 0.00879363
+offset = Vector2(20, 0)
+
+[node name="HTTPRequestNode" type="HTTPRequest" parent="."]
+
+[connection signal="mouse_entered" from="Seleccion 1" to="personaje1" method="_on_seleccion_1_mouse_entered"]
+[connection signal="mouse_exited" from="Seleccion 1" to="personaje1" method="_on_seleccion_1_mouse_exited"]
+[connection signal="pressed" from="Seleccion 1" to="." method="_on_seleccion_1_pressed"]
+[connection signal="mouse_entered" from="Seleccion 2" to="personaje2" method="_on_seleccion_2_mouse_entered"]
+[connection signal="mouse_exited" from="Seleccion 2" to="personaje2" method="_on_seleccion_2_mouse_exited"]
+[connection signal="pressed" from="Seleccion 2" to="." method="_on_seleccion_2_pressed"]
+[connection signal="mouse_entered" from="Seleccion 3" to="personaje3" method="_on_seleccion_3_mouse_entered"]
+[connection signal="mouse_exited" from="Seleccion 3" to="personaje3" method="_on_seleccion_3_mouse_exited"]
+[connection signal="pressed" from="Seleccion 3" to="." method="_on_seleccion_3_pressed"]
+[connection signal="mouse_entered" from="Seleccion 4" to="personaje4" method="_on_seleccion_4_mouse_entered"]
+[connection signal="mouse_exited" from="Seleccion 4" to="personaje4" method="_on_seleccion_4_mouse_exited"]
+[connection signal="pressed" from="Seleccion 4" to="." method="_on_seleccion_4_pressed"]
+[connection signal="request_completed" from="HTTPRequestNode" to="." method="_on_http_request_node_request_completed"]

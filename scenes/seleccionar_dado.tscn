@@ -1,0 +1,239 @@
+[gd_scene load_steps=23 format=3 uid="uid://1j88f4ocqf7d"]
+
+[ext_resource type="Script" path="res://script/dado_1.gd" id="1_5m05k"]
+[ext_resource type="Script" path="res://script/seleccionar_dado.gd" id="1_77p4f"]
+[ext_resource type="Script" path="res://script/panel_1_seleccionar_dado.gd" id="1_evfy5"]
+[ext_resource type="Script" path="res://script/dado_2.gd" id="2_fjv37"]
+[ext_resource type="Script" path="res://script/dado_3.gd" id="3_a21w5"]
+[ext_resource type="Script" path="res://script/panel_2_seleccionar_dado.gd" id="3_gro8p"]
+[ext_resource type="Script" path="res://script/dado_4.gd" id="4_pi342"]
+[ext_resource type="Script" path="res://script/panel_3_seleccionar_dado.gd" id="5_icv7u"]
+[ext_resource type="Script" path="res://script/panel_4_seleccionar_dado.gd" id="7_618ls"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcrqt"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5xpf"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab7y8"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v7oj"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djvqt"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el70n"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddqe6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yror3"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ds4q6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_scmh6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j1724"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_upo22"]
+bg_color = Color(0.290196, 0.819608, 0.513726, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unrdn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Seleccionar dado" type="Node2D"]
+script = ExtResource("1_77p4f")
+
+[node name="titulo" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 78.0
+theme_override_font_sizes/font_size = 30
+text = "Seleccionar Dado"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="panel1" type="Panel" parent="."]
+offset_left = 153.0
+offset_top = 192.0
+offset_right = 333.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kcrqt")
+script = ExtResource("1_evfy5")
+metadata/_edit_use_anchors_ = true
+
+[node name="dado1" type="Sprite2D" parent="panel1"]
+position = Vector2(90, 85)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_5m05k")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel1/dado1"]
+
+[node name="Button1" type="Button" parent="."]
+offset_left = 152.0
+offset_top = 368.0
+offset_right = 332.0
+offset_bottom = 416.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_t5xpf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab7y8")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel2" type="Panel" parent="."]
+offset_left = 375.0
+offset_top = 192.0
+offset_right = 555.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3v7oj")
+script = ExtResource("3_gro8p")
+metadata/_edit_use_anchors_ = true
+
+[node name="dado2" type="Sprite2D" parent="panel2"]
+position = Vector2(90, 85)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("2_fjv37")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel2/dado2"]
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 376.0
+offset_top = 368.0
+offset_right = 556.0
+offset_bottom = 416.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_djvqt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_el70n")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel3" type="Panel" parent="."]
+offset_left = 598.0
+offset_top = 192.0
+offset_right = 778.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ddqe6")
+script = ExtResource("5_icv7u")
+metadata/_edit_use_anchors_ = true
+
+[node name="dado3" type="Sprite2D" parent="panel3"]
+position = Vector2(90, 85)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("3_a21w5")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel3/dado3"]
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 599.0
+offset_top = 368.0
+offset_right = 779.0
+offset_bottom = 416.0
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_yror3")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ds4q6")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[node name="panel4" type="Panel" parent="."]
+offset_left = 817.0
+offset_top = 192.0
+offset_right = 997.0
+offset_bottom = 342.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_scmh6")
+script = ExtResource("7_618ls")
+metadata/_edit_use_anchors_ = true
+
+[node name="dado4" type="Sprite2D" parent="panel4"]
+position = Vector2(90, 85)
+scale = Vector2(0.4, 0.4)
+script = ExtResource("4_pi342")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="panel4/dado4"]
+
+[node name="Button4" type="Button" parent="."]
+offset_left = 818.0
+offset_top = 368.0
+offset_right = 998.0
+offset_bottom = 416.0
+theme_override_colors/font_color = Color(0.0627451, 0.00784314, 0.301961, 1)
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_j1724")
+theme_override_styles/hover = SubResource("StyleBoxFlat_upo22")
+theme_override_styles/normal = SubResource("StyleBoxFlat_unrdn")
+text = "Seleccionar"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="request_completed" from="panel1/dado1/HTTPRequest" to="panel1/dado1" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button1" to="panel1" method="_on_button_1_mouse_entered"]
+[connection signal="mouse_exited" from="Button1" to="panel1" method="_on_button_1_mouse_exited"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="request_completed" from="panel2/dado2/HTTPRequest" to="panel2/dado2" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button2" to="panel2" method="_on_button_2_mouse_entered"]
+[connection signal="mouse_exited" from="Button2" to="panel2" method="_on_button_2_mouse_exited"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="request_completed" from="panel3/dado3/HTTPRequest" to="panel3/dado3" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button3" to="panel3" method="_on_button_3_mouse_entered"]
+[connection signal="mouse_exited" from="Button3" to="panel3" method="_on_button_3_mouse_exited"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="request_completed" from="panel4/dado4/HTTPRequest" to="panel4/dado4" method="_on_http_request_request_completed"]
+[connection signal="mouse_entered" from="Button4" to="panel4" method="_on_button_4_mouse_entered"]
+[connection signal="mouse_exited" from="Button4" to="panel4" method="_on_button_4_mouse_exited"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]
