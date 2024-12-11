@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bj3j58k4r5gw6"]
+[gd_scene load_steps=8 format=3 uid="uid://bj3j58k4r5gw6"]
 
 [ext_resource type="PackedScene" uid="uid://b3d68nk1vfn7n" path="res://scenes/tablero_1.tscn" id="1_pa3iq"]
 [ext_resource type="Script" path="res://script/lanzar_6.gd" id="1_wfexw"]
+[ext_resource type="PackedScene" uid="uid://cxl0ecsq60etm" path="res://tablero_1.1.tscn" id="2_8foj2"]
 [ext_resource type="Script" path="res://script/lanzar_tablero_6.gd" id="2_pn0mq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f7bjy"]
@@ -42,6 +43,8 @@ corner_radius_bottom_left = 10
 
 [node name="lanzar_6" type="Node2D"]
 script = ExtResource("1_wfexw")
+
+[node name="tablero_1_1" parent="." instance=ExtResource("2_8foj2")]
 
 [node name="tablero_1" parent="." instance=ExtResource("1_pa3iq")]
 

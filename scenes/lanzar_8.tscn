@@ -1,48 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://hcq1r4rr3ljc"]
+[gd_scene load_steps=8 format=3 uid="uid://hcq1r4rr3ljc"]
 
-[sub_resource type="Theme" id="Theme_3ay6h"]
+[ext_resource type="Script" path="res://script/lanzar_8.gd" id="1_eoni0"]
+[ext_resource type="PackedScene" uid="uid://b3d68nk1vfn7n" path="res://scenes/tablero_1.tscn" id="1_q1sb6"]
+[ext_resource type="PackedScene" uid="uid://cxl0ecsq60etm" path="res://tablero_1.1.tscn" id="2_gcrj2"]
+[ext_resource type="Script" path="res://script/lanzar_tablero_6.gd" id="3_gbwt7"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrkyv"]
-bg_color = Color(0.909804, 0, 0.615686, 1)
-corner_radius_top_left = 300
-corner_radius_top_right = 300
-corner_radius_bottom_right = 300
-corner_radius_bottom_left = 300
-corner_detail = 14
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vksij"]
-bg_color = Color(0.909804, 0, 0.615686, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ferav"]
-bg_color = Color(0.94902, 0.521569, 0.835294, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-corner_detail = 7
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b3ewc"]
-bg_color = Color(0.909804, 0, 0.615686, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_36m3x"]
-bg_color = Color(0.814181, 0.0330379, 0.64696, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jibj"]
+bg_color = Color(0.921569, 0.411765, 0.411765, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -53,604 +17,60 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vsew"]
-bg_color = Color(0.968627, 0.866667, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gn3p4"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.464314, 0.904271, 0.681681, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4i1nm"]
+bg_color = Color(0.615686, 0.615686, 0.615686, 0)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8u4lu"]
-bg_color = Color(0.968627, 0.866667, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_px4ac"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.815686, 0.0313726, 0.647059, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2n1n"]
-bg_color = Color(0.85098, 0.0431373, 0.678431, 0)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.815686, 0.0313726, 0.647059, 1)
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="lanzar_8" type="Node2D"]
+script = ExtResource("1_eoni0")
+
+[node name="tablero_1_1" parent="." instance=ExtResource("2_gcrj2")]
+
+[node name="tablero_1" parent="." instance=ExtResource("1_q1sb6")]
 
 [node name="Panel" type="Panel" parent="."]
-custom_minimum_size = Vector2(200, 200)
-offset_left = 888.0
-offset_top = 392.0
-offset_right = 1424.0
-offset_bottom = 904.0
-theme = SubResource("Theme_3ay6h")
-theme_override_styles/panel = SubResource("StyleBoxFlat_qrkyv")
-metadata/_edit_use_anchors_ = true
+offset_left = 216.0
+offset_top = 24.0
+offset_right = 316.0
+offset_bottom = 124.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8jibj")
 
-[node name="Panel" type="Panel" parent="Panel"]
-custom_minimum_size = Vector2(200, 200)
+[node name="lanzar" type="Sprite2D" parent="Panel"]
+position = Vector2(50, 40)
+script = ExtResource("3_gbwt7")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel/lanzar"]
+
+[node name="Button" type="Button" parent="Panel"]
 layout_mode = 0
-offset_top = -648.0
-offset_right = 536.0
-offset_bottom = -136.0
-theme = SubResource("Theme_3ay6h")
-theme_override_styles/panel = SubResource("StyleBoxFlat_qrkyv")
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel3" type="Panel" parent="."]
-custom_minimum_size = Vector2(130, 130)
-offset_left = 1008.0
-offset_top = 504.0
-offset_right = 1138.0
-offset_bottom = 634.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_vksij")
-metadata/_edit_use_anchors_ = true
-
-[node name="circu" type="Panel" parent="Panel3"]
-custom_minimum_size = Vector2(110, 110)
-layout_mode = 0
-offset_left = 11.0
-offset_top = 10.0
-offset_right = 121.0
-offset_bottom = 120.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ferav")
-metadata/_edit_use_anchors_ = true
-
-[node name="Pj3" type="Sprite2D" parent="Panel3"]
-position = Vector2(66, 64)
-scale = Vector2(0.766667, 0.7)
-
-[node name="puntos3" type="Panel" parent="Panel3"]
-custom_minimum_size = Vector2(100, 120)
-layout_mode = 0
-offset_left = 16.0
-offset_top = -104.0
-offset_right = 116.0
-offset_bottom = 16.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_b3ewc")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Panel3/puntos3"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 8.0
-offset_right = 75.0
-offset_bottom = 31.0
-text = "Melisa"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="Panel3/puntos3"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 33.0
-offset_right = 101.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 12
-text = "Presupuesto:"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="Panel3/puntos3"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 48.0
+offset_left = 10.0
+offset_top = 64.0
 offset_right = 90.0
-offset_bottom = 71.0
-text = "1000 $"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="Panel3/puntos3"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 72.0
-offset_right = 65.0
 offset_bottom = 95.0
-theme_override_font_sizes/font_size = 12
-text = "Puntos:"
-metadata/_edit_use_anchors_ = true
+theme_override_colors/font_hover_color = Color(0.870387, 2.88785e-07, 1.2514e-06, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_gn3p4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4i1nm")
+text = "Lanzar"
 
-[node name="puntos1" type="Label" parent="Panel3/puntos3"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 88.0
-offset_right = 80.0
-offset_bottom = 111.0
-text = "0"
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="puntaje3" type="Panel" parent="Panel3"]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 0
-offset_left = -320.0
-offset_top = 19.0
-offset_right = -20.0
-offset_bottom = 119.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_36m3x")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Panel3/puntaje3"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 13.0
-offset_right = 142.0
-offset_bottom = 37.0
-pivot_offset = Vector2(50, 0)
-theme_override_font_sizes/font_size = 12
-text = "Productos(0/5):"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="Panel3/puntaje3"]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 0
-offset_left = 24.0
-offset_top = 43.0
-offset_right = 142.0
-offset_bottom = 66.0
-theme_override_font_sizes/font_size = 12
-text = "Proyectos(0/1):"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="Panel3/puntaje3"]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 0
-offset_left = 24.0
-offset_top = 73.0
-offset_right = 142.0
-offset_bottom = 96.0
-theme_override_font_sizes/font_size = 12
-text = "Recursos(0/1):"
-metadata/_edit_use_anchors_ = true
-
-[node name="Personaje3León" type="Sprite2D" parent="Panel3"]
-position = Vector2(-8.00006, 80)
-scale = Vector2(0.2, 0.2)
-
-[node name="Panel4" type="Panel" parent="."]
-custom_minimum_size = Vector2(130, 130)
-offset_left = 1000.0
-offset_top = 16.0
-offset_right = 1130.0
-offset_bottom = 146.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_vksij")
-metadata/_edit_use_anchors_ = true
-
-[node name="circu" type="Panel" parent="Panel4"]
-custom_minimum_size = Vector2(110, 110)
-layout_mode = 0
-offset_left = 11.0
-offset_top = 9.0
-offset_right = 121.0
-offset_bottom = 119.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ferav")
-metadata/_edit_use_anchors_ = true
-
-[node name="Pj4" type="Sprite2D" parent="Panel4"]
-position = Vector2(64.0001, 64)
-scale = Vector2(0.75, 0.716667)
-
-[node name="puntos4" type="Panel" parent="Panel4"]
-custom_minimum_size = Vector2(100, 120)
-layout_mode = 0
-offset_left = 24.0
-offset_top = 104.0
-offset_right = 124.0
-offset_bottom = 224.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_0vsew")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Panel4/puntos4"]
-layout_mode = 0
-offset_left = 24.0
-offset_top = 8.0
-offset_right = 75.0
-offset_bottom = 31.0
-text = "Nicole"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="Panel4/puntos4"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 33.0
-offset_right = 101.0
-offset_bottom = 56.0
-theme_override_font_sizes/font_size = 12
-text = "Presupuesto:"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="Panel4/puntos4"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 48.0
-offset_right = 90.0
-offset_bottom = 71.0
-text = "1000 $"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label4" type="Label" parent="Panel4/puntos4"]
-layout_mode = 0
-offset_left = 6.0
-offset_top = 72.0
-offset_right = 65.0
-offset_bottom = 95.0
-theme_override_font_sizes/font_size = 12
-text = "Puntos:"
-metadata/_edit_use_anchors_ = true
-
-[node name="puntos1" type="Label" parent="Panel4/puntos4"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 88.0
-offset_right = 80.0
-offset_bottom = 111.0
-text = "0"
-horizontal_alignment = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="puntaje4" type="Panel" parent="Panel4"]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 0
-offset_left = -326.0
-offset_top = -2.0
-offset_right = -26.0
-offset_bottom = 98.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_8u4lu")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Panel4/puntaje4"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 10.0
-offset_right = 136.0
-offset_bottom = 34.0
-pivot_offset = Vector2(50, 0)
-theme_override_font_sizes/font_size = 12
-text = "Productos(0/5):"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="Panel4/puntaje4"]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 0
-offset_left = 18.0
-offset_top = 40.0
-offset_right = 136.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 12
-text = "Proyectos(0/1):"
-metadata/_edit_use_anchors_ = true
-
-[node name="Label3" type="Label" parent="Panel4/puntaje4"]
-custom_minimum_size = Vector2(10, 0)
-layout_mode = 0
-offset_left = 18.0
-offset_top = 70.0
-offset_right = 136.0
-offset_bottom = 93.0
-theme_override_font_sizes/font_size = 12
-text = "Recursos(0/1):"
-metadata/_edit_use_anchors_ = true
-
-[node name="Personaje4Gato" type="Sprite2D" parent="Panel4"]
-position = Vector2(0, 56)
-scale = Vector2(0.2, 0.2)
-
-[node name="dia8" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 518.0
-offset_top = -54.0
-offset_right = 568.0
-offset_bottom = -4.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia8"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia8/numero"]
-layout_mode = 0
-offset_left = 1.0
-offset_right = 49.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "8
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="dia8"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 6.0
-offset_right = 45.0
-offset_bottom = 48.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 30
-text = "3"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="dia9" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 577.0
-offset_top = -54.0
-offset_right = 627.0
-offset_bottom = -4.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia9"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia9/numero"]
-layout_mode = 0
-offset_left = 1.0
-offset_right = 49.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "9
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="dia9"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 6.0
-offset_right = 45.0
-offset_bottom = 48.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 30
-text = "2
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="dia10" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 577.0
-offset_top = 18.0
-offset_right = 627.0
-offset_bottom = 68.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia10"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia10/numero"]
-layout_mode = 0
-offset_right = 48.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "10
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="dia10"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 4.0
-offset_right = 45.0
-offset_bottom = 46.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 30
-text = "2
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="dia11" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 578.0
-offset_top = 89.0
-offset_right = 628.0
-offset_bottom = 139.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia11"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia11/numero"]
-layout_mode = 0
-offset_left = -1.0
-offset_right = 47.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "11
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="dia11"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 45.0
-offset_bottom = 47.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 30
-text = "2
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="dia12" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 519.0
-offset_top = 89.0
-offset_right = 569.0
-offset_bottom = 139.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia12"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia12/numero"]
-layout_mode = 0
-offset_right = 48.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "12
-"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="dia12"]
-layout_mode = 0
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 45.0
-offset_bottom = 47.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 30
-text = "3"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="dia28" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 577.0
-offset_top = 234.0
-offset_right = 627.0
-offset_bottom = 284.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia28"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia28/numero"]
-layout_mode = 0
-offset_left = -59.0
-offset_right = -11.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "28"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="dia29" type="Panel" parent="."]
-custom_minimum_size = Vector2(50, 50)
-offset_left = 518.0
-offset_top = 234.0
-offset_right = 568.0
-offset_bottom = 284.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_px4ac")
-metadata/_edit_use_anchors_ = true
-
-[node name="numero" type="Panel" parent="dia29"]
-custom_minimum_size = Vector2(50, 10)
-layout_mode = 0
-offset_top = 50.0
-offset_right = 50.0
-offset_bottom = 66.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_o2n1n")
-metadata/_edit_use_anchors_ = true
-
-[node name="Label2" type="Label" parent="dia29/numero"]
-layout_mode = 0
-offset_left = 59.0
-offset_right = 107.0
-offset_bottom = 14.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 10
-text = "29"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="dia29"]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 6.0
-offset_right = 104.0
-offset_bottom = 48.0
-theme_override_colors/font_color = Color(0.815686, 0.0313726, 0.647059, 1)
-theme_override_font_sizes/font_size = 30
-text = "3"
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
+[connection signal="request_completed" from="Panel/lanzar/HTTPRequest" to="Panel/lanzar" method="_on_http_request_request_completed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

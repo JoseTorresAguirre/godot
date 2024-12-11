@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0mh2xi0lfdxg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kenar"]
+bg_color = Color(0.289082, 0.688991, 0.49958, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="fin_de_mes" type="Node2D"]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 256.0
+offset_top = 184.0
+offset_right = 896.0
+offset_bottom = 472.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kenar")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 104.0
+offset_right = 530.0
+offset_bottom = 153.0
+text = "Felicidades llegastes al final de mes:
+Recibes una recompensa de 500 $, usalo sabiamente."

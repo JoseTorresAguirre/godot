@@ -49,8 +49,10 @@ func stop_dice_animations() -> void:
 	
 
 	# Almacena el resultado en la variable global
-	SelectedCharacter.player1_avanzar= str(total_sum)
+	SelectedCharacter.player1_avanzar += total_sum
 	print(SelectedCharacter.player1_avanzar)
+	print("Nueva posición del jugador: ", SelectedCharacter.player1_avanzar)
+	get_tree().change_scene_to_file("res://scenes/lanzar_8.tscn")
 
 	# Cambia a la siguiente escena después de unos segundos (opcional)
 	#await get_tree().create_timer(2.0).timeout

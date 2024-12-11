@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://hcq1r4rr3ljc"]
+
+[ext_resource type="Script" path="res://script/lanzar_8.gd" id="1_eoni0"]
+[ext_resource type="PackedScene" uid="uid://b3d68nk1vfn7n" path="res://scenes/tablero_1.tscn" id="1_q1sb6"]
+
+[node name="lanzar_8" type="Node2D"]
+script = ExtResource("1_eoni0")
+
+[node name="tablero_1" parent="." instance=ExtResource("1_q1sb6")]

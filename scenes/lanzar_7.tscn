@@ -73,6 +73,7 @@ offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_87qq2")
 
 [node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 160.0
 offset_top = 64.0
 offset_right = 345.0
@@ -82,6 +83,7 @@ text = "Arturo, estas listo?:"
 
 [node name="start" type="Button" parent="Panel"]
 custom_minimum_size = Vector2(200, 45)
+layout_mode = 0
 offset_left = 320.0
 offset_top = 136.0
 offset_right = 520.0
